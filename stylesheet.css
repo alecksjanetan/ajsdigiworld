@@ -1,13 +1,6 @@
 <style>
 
-@font-face {
-    font-family: 'Lexique';
-    src: url('https://github.com/alecksjanetan/ajsdigiworld/blob/main/css/Lexique%20Font%20Style%20Sheet/Lexique-Regular.woff2') format('woff2'),
-        url('https://github.com/alecksjanetan/ajsdigiworld/blob/main/css/Lexique%20Font%20Style%20Sheet/Lexique-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
+
 * {
   box-sizing: border-box;
 }
