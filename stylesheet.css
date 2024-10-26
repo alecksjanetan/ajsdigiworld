@@ -1,15 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<title>AJ's DigiWorld</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 <link rel="preload" href="Lexique-Regular.woff2" as="font" type="font/woff2" crossorigin>
 @font-face {
     font-family: 'Lexique';
-    src: url('https://alecksjanetan.github.io/ajsdigiworld/main/stylesheet/Lexique-Regular.woff2') format('woff2'),
-        url('https://alecksjanetan.github.io/ajsdigiworld/main/stylesheet/Lexique-Regular.woff') format('woff');
+    src: url('https://github.com/alecksjanetan/ajsdigiworld/blob/main/Lexique-Regular.woff2') format('woff2'),
+        url('https://github.com/alecksjanetan/ajsdigiworld/blob/main/Lexique-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -227,32 +221,3 @@ font-size: 20px;
   }
 }
 </style>
-
-</head>
-<body>
-
-<div class="navbar">
-
-  <a href="https://ibb.co/6rT2Ncw"><img src="https://i.ibb.co/DzvNLPW/Pink-AJ-Letter-Logo-2.png" width="50" height="50"></a>
-  <a href="#" class="right">About</a>
-  <a href="#" class="right">Portfolio</a>
-  <a href="#" class="right">Skills</a>
-  <a href="#" class="right">Contact</a>
-</div>
-	
-<div class="header">
-  <h1>Hello, I'm AJ.</h1>
-  <p>I am a digital marketer and graphic designer. Welcome to my web-folio. This is a space where I share my experiences in the digital world and portfolio of my works.</p>
-</div>
-
-<div class="footer">
-<a href="https://www.linkedin.com/in/alex-jane-tan-6686a513a/">LinkedIn</a>
-<a href="https://www.instagram.com/alecksjanetan/">Instagram</a>
-</div>
-
- 
-
-
-</body>
-</html>
-
