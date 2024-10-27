@@ -80,6 +80,11 @@ body {
   width: 150px;
 }
 
+.btn {
+margin-top: 20px;
+margin-left: none;
+	margin right: none;}
+
 /* Style the top navigation bar */
 .navbar {
   overflow: hidden;
