@@ -1,5 +1,3 @@
-
-
 <style>
 @font-face {
     font-family: 'Lexique';
@@ -18,6 +16,7 @@
     font-style: normal;
     font-display: swap;
 }
+
 
 * {
   box-sizing: border-box;
@@ -59,6 +58,29 @@ body {
   max-width: 50%;
   line-height: 1.3;
   font-family:'Lexique';
+}
+
+.header .btn {
+  background-color: #f0737f;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin-top: 20px;
+  font-family:'Lexique';
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-content: flex-start;
+  width: 150px;
+
+
+
+
 }
 
 /* Style the top navigation bar */
