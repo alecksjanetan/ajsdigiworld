@@ -17,6 +17,9 @@
     font-display: swap;
 }
 
+a {
+  text-decoration: none;
+}
 
 * {
   box-sizing: border-box;
@@ -68,13 +71,12 @@ body {
   border-radius: 16px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
   font-size: 20px;
   margin-top: 20px;
   font-family:'Lexique';
   display: flex;
   align-items: flex-start;
-  justify-content: flex-start;
+  justify-content: center;
   align-content: flex-start;
   width: 150px;
 }
@@ -224,7 +226,25 @@ font-weight: 700;
       background-color: rgb(240, 115 , 127, 0q);
       
 }
-
+.btn {
+  background-color: #f0737f;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 16px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  margin-top: 20px;
+  font-family:'Lexique';
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  align-content: flex-start;
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .footer {
 font-size: 20px;
 }
