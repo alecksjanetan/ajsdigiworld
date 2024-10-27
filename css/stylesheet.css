@@ -79,7 +79,13 @@ body {
   width: 150px;
 }
 
-.btn a
+.btn:hover {
+  background-color: #fcedf0;
+  color: #f0737f;
+  padding: 10px 20px;
+  border: #f0737f;
+  border-radius: 16px;
+}
 
 .btn {
 margin-left: none;
