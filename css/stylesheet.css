@@ -60,7 +60,7 @@ body {
   font-family:'Lexique';
 }
 
-.header .btn {
+.btn {
   background-color: #f0737f;
   color: white;
   padding: 10px 20px;
@@ -77,10 +77,6 @@ body {
   justify-content: flex-start;
   align-content: flex-start;
   width: 150px;
-
-
-
-
 }
 
 /* Style the top navigation bar */
