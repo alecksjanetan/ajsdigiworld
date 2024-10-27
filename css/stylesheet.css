@@ -70,7 +70,8 @@ body {
   border: none;
   border-radius: 16px;
   text-align: center;
-  text-decoration: none;
+  text-decoration: none !important;
+
   font-size: 20px;
   margin-top: 20px;
   font-family:'Lexique';
@@ -233,7 +234,7 @@ font-weight: 700;
   border: none;
   border-radius: 16px;
   text-align: center;
-  text-decoration: none;
+  text-decoration: none !important;
   font-size: 20px;
   margin-top: 20px;
   font-family:'Lexique';
