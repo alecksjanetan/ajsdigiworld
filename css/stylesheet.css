@@ -79,7 +79,7 @@ body {
   width: 150px;
 }
 
-.btn:hover {
+.btn a:hover {
   background-color: #fcedf0;
   color: #f0737f;
   padding: 10px 20px;
