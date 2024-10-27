@@ -17,7 +17,283 @@
 
 
 </head>
-
+<style>
+  @font-face {
+      font-family: 'Lexique';
+      src: url('Lexique-Regular.woff2') format('woff2'),
+          url('Lexique-Regular.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+  }
+  
+  @font-face {
+      font-family: 'Lexique';
+      src: url('Lexique-Regular.woff2') format('woff2'),
+          url('Lexique-Regular.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  
+  body {
+    font-family: 'Lexique';
+    
+    margin: 0;
+  }
+  
+  
+  .header {
+    padding: 80px;
+    text-align: left;
+    color: white;
+    background-image: url(https://i.ibb.co/8sn0kpF/Header-BG-1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 540px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family:'Lexique';
+  }
+  
+  
+  .header h1 {
+    font-size: 60px;
+    margin: 0px;
+    font-family:'Lexique';
+  }
+  
+  .header p {
+    font-size: 30px;
+    margin-top: 5px;
+    max-width: 50%;
+    line-height: 1.3;
+    font-family:'Lexique';
+  }
+  
+  .btn a {
+    background-color: #f0737f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 16px;
+    text-align: center;
+    text-decoration: none !important;
+    font-size: 20px;
+    font-family:'Lexique';
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 150px;
+  }
+  
+  .btn a:hover {
+    background-color: #f0737f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 16px;
+  }
+  
+  .btn {
+  margin-left: none;
+  margin-right: none;
+  }
+  
+  
+  .navbar {
+    overflow: hidden;
+    background-color: #fcedf0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:'Lexique';
+  }
+  
+  
+  .navbar a {
+    float: left;
+    display: block;
+    color: #f0737f;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 20px;
+    /*text-transform: uppercase;*/
+  }
+  
+  
+  .navbar a.right {
+    float: right;
+  }
+  
+  
+  .navbar a:hover {
+    background-color: #fcedf0;
+    color: #ffb5c2;
+    text-decoration: underline;
+  }
+  
+  
+  .row {  
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+  }
+  
+  
+  .side {
+    -ms-flex: 30%; /* IE10 */
+    flex: 30%;
+    background-color: #f1f1f1;
+    padding: 20px;
+  }
+  
+  
+  .main {   
+    -ms-flex: 70%; /* IE10 */
+    flex: 70%;
+    background-color: white;
+    padding: 20px;
+  }
+  
+  
+  
+  
+  
+  .footer {
+    padding: 20px;
+    text-align: center;
+    background: #fcedf0;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-family:'Lexique';
+    font-size: 20px;
+    color: #f0737f;
+    text-decoration: none;
+  }
+  
+  .footer a {
+  text-decoration:none;
+  margin: 5px 20px;
+  color: #f0737f;
+  }
+  
+  .footer a:hover {
+   color: #ffb5c2;
+  }
+  
+  
+  
+    
+  @media screen and (max-width: 970px) {
+    .row {   
+      flex-direction: column;
+      align-content: center;
+      align-items: center;
+    }
+    .navbar {
+    float: none;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      align-items: center;
+    }
+    .header {
+    padding: 20px;
+    }
+    .header h1 {
+      padding: 10px;
+      text-align: center;
+      color: white;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      font-family: 'Lexique';
+      align-content: center;
+      flex-wrap: nowrap;
+      align-items: center;
+        background-color: rgb(240, 115 , 127, 0);
+        background-size: auto;
+        font-size: 45px; 
+  padding: 2px 0px 2px 0px;
+  font-weight: 700;
+  }
+  .header p {
+    font-size: 25px;
+    margin-top: 10px;
+    max-width: 100%;
+    line-height: 1.3;
+    font-family:'Lexique';
+     display: flex;
+      justify-content: center;
+      flex-direction: column;
+      font-family: 'Lexique';
+      align-content: center;
+      flex-wrap: nowrap;
+      align-items: center;
+      text-align: center;
+        background-color: rgb(240, 115 , 127, 0q);
+        
+  }
+  .btn a {
+    background-color: #f0737f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 16px;
+    text-align: center;
+    text-decoration: none !important;
+    font-size: 20px;
+    font-family:'Lexique';
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 150px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: none !important;
+  }
+  .footer {
+  font-size: 20px;
+  }
+  }
+  
+  
+  @media screen and (max-width: 400px) {
+    .navbar {
+      float: none;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      align-items: center;
+    }
+    
+    .header {
+      padding: 40px;
+    }
+    
+    .header h1 {
+      font-size: 30px;
+    }
+  }
+  </style>
+  
 
 <body>
 
