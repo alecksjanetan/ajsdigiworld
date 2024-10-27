@@ -65,7 +65,7 @@ body {
 
 .btn a {
   background-color: #f0737f;
-  color: hotpink;
+  color: white;
   padding: 10px 20px;
   border: none;
   border-radius: 16px;
@@ -78,6 +78,8 @@ body {
   justify-content: center;
   width: 150px;
 }
+
+.btn a
 
 .btn {
 margin-left: none;
