@@ -174,6 +174,7 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+
   }
 
   .about h1 {
@@ -185,8 +186,8 @@
 
   .about p {
     font-size: 30px;
-    margin-top: 5px;
-    max-width: 70%;
+    margin-top: 20px;
+    max-width: 90%;
     line-height: 1.3;
     font-family: 'Lexique';
     padding-left: 80px;
@@ -206,6 +207,7 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+
 }
   
 .experiences .grid {
@@ -215,6 +217,7 @@
   grid-template-columns: auto auto auto;
   gap: 10px;
   margin-top: 20px;
+  
 }
 
 .experiences > div {
@@ -257,262 +260,113 @@
     background-size: cover;
     background-position: center;
     max-height: 540px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+   
+
 }
 
-@import url(https://fonts.googleapis.com/css?family=Expletus+Sans);
+.outer-Container {
+  padding-left: 80px;
+  margin-top: 40px;
+  display: grid;
+  align-content: left;
+  max-width: 90%;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto;
+  gap: 30px;
+  row-gap: 30px;
 
-/* Basic resets */
-
-* { 
-	margin:0; padding:0; 
-	box-sizing: border-box;
-}
-li {
-       min-width: 360px;
-	list-style-type: none;
-	padding-right: 5.3333333%;
-}
-
-li:nth-child(even) { margin-bottom: 5em;}
-
-h2 {
-	margin: 0 0 1.5em;
-	border-bottom: 1px solid #ccc;
-	padding: 0 0 .25em;
 }
 
-/* Styling an indeterminate progress bar */
-
-progress:not(value) {
-	/* Add your styles here. As part of this walkthrough we will focus only on determinate progress bars. */
+.outer-Container .h2 {
+  font-size: 40px;
+    padding-left: 0px;
+    margin-bottom: 0px;  
 }
 
-/* Styling the determinate progress element */
+.iner-wrapper {
+  padding: 0px 30px 30px 30px;
+  background-color: #fcedf0;
+  width: 100%;
+  height: auto;
+  -webkit-box-shadow: 1px 3px 8px 0px #f0737f;
+  box-shadow: 1px 3px 8px 0px #f0737f;
 
-progress[value] {
-	/* Get rid of the default appearance */
-	appearance: none;
-	
-	/* This unfortunately leaves a trail of border behind in Firefox and Opera. We can remove that by setting the border to none. */
-	border: none;
-	
-	/* Add dimensions */
-	width: 100%; height: 20px;
-	
-	/* Although firefox doesn't provide any additional pseudo class to style the progress element container, any style applied here works on the container. */
-	  background-color: whiteSmoke;
-	  border-radius: 3px;
-	  box-shadow: 0 2px 3px rgba(0,0,0,.5) inset;
-	
-	/* Of all IE, only IE10 supports progress element that too partially. It only allows to change the background-color of the progress value using the 'color' attribute. */
-	color: royalblue;
-	
-	position: relative;
-	margin: 0 0 1.5em; 
+ 
+}
+.skill-bar .info span {
+  display: inline-block;
+  margin: 30px 0px 0px 0px;
+  font-size: 30px;
+  font-weight: 500;
+  color: #f0737f;
 }
 
-/*
-Webkit browsers provide two pseudo classes that can be use to style HTML5 progress element.
--webkit-progress-bar -> To style the progress element container
--webkit-progress-value -> To style the progress element value.
-*/
-
-progress[value]::-webkit-progress-bar {
-	background-color: whiteSmoke;
-	border-radius: 3px;
-	box-shadow: 0 2px 3px rgba(0,0,0,.5) inset;
-}
-
-progress[value]::-webkit-progress-value {
-	position: relative;
-	
-	background-size: 35px 20px, 100% 100%, 100% 100%;
-	border-radius:3px;
-	
-	/* Let's animate this */
-	animation: animate-stripes 5s linear infinite;
-}
-
-@keyframes animate-stripes { 100% { background-position: -100px 0; } }
-
-/* Let's spice up things little bit by using pseudo elements. */
-
-progress[value]::-webkit-progress-value:after {
-	/* Only webkit/blink browsers understand pseudo elements on pseudo classes. A rare phenomenon! */
-	content: '';
-	position: absolute;
-	
-	width:5px; height:5px;
-	top:7px; right:7px;
-	
-	background-color: white;
-	border-radius: 100%;
-}
-
-/* Firefox provides a single pseudo class to style the progress element value and not for container. -moz-progress-bar */
-
-progress[value]::-moz-progress-bar {
-	/* Gradient background with Stripes */
-	background-image:
-	-moz-linear-gradient( 135deg,
-													 transparent,
-													 transparent 33%,
-													 rgba(0,0,0,.1) 33%,
-													 rgba(0,0,0,.1) 66%,
-													 transparent 66%),
-    -moz-linear-gradient( top,
-														rgba(255, 255, 255, .25),
-														rgba(0,0,0,.2)),
-     -moz-linear-gradient( left, #09c, #f44);
-	
-	background-size: 35px 20px, 100% 100%, 100% 100%;
-	border-radius:3px;
-	
-	/* Firefox doesn't support CSS3 keyframe animations on progress element. Hence, we did not include animate-stripes in this code block */
-}
-
-/* Fallback technique styles */
 .progress-bar {
-	background-color: whiteSmoke;
-	border-radius: 3px;
-	box-shadow: 0 2px 3px rgba(0,0,0,.5) inset;
-
-	/* Dimensions should be similar to the parent progress element. */
-	width: 100%; height:20px;
+  position: relative;
+  overflow: hidden;
+  margin: 10px 0px;
+  width: 100%;
+  height: 8px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  -webkit-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: left;
+  -ms-transform-origin: left;
+  transform-origin: left;
+  -webkit-animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
 }
 
 .progress-bar span {
-	background-color: royalblue;
-	border-radius: 3px;
-	
-	display: block;
-	text-indent: -9999px;
+  position: absolute;
+  background: #000;
+  width: 100%;
+  height: 8px;
+  border-radius: 10px;
+  -webkit-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: left;
+  -ms-transform-origin: left;
+  transform-origin: left;
+  -webkit-animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+  animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
 }
 
-p[data-value] { 
-  
-  position: relative; 
+@-webkit-keyframes animate {
+  100% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
 }
 
-/* The percentage will automatically fall in place as soon as we make the width fluid. Now making widths fluid. */
+@keyframes animate {
+  100% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+}
 
-p[data-value]:after {
-	content: attr(data-value) '%';
-	position: absolute; right:0;
+.html span {
+  width: 89%;
+  background: #ffb5c2;
+}
+.css span {
+  width: 85%;
+  background: #fec0cb;
+}
+.javascript span {
+  width: 70%;
+  background: #fecbd4;
+}
+.bootstrap span {
+  width: 80%;
+  background: #ffd7de;
 }
 
 
-
-
-
-.html5::-webkit-progress-value,
-.python::-webkit-progress-value  {
-	/* Gradient background with Stripes */
-	background-image:
-	-webkit-linear-gradient( 135deg,
-													 transparent,
-													 transparent 33%,
-													 rgba(0,0,0,.1) 33%,
-													 rgba(0,0,0,.1) 66%,
-													 transparent 66%),
-    -webkit-linear-gradient( top,
-														rgba(255, 255, 255, .25),
-														rgba(0,0,0,.2)),
-     -webkit-linear-gradient( left, #09c, #f44);
-}
-
-.css3::-webkit-progress-value,
-.php::-webkit-progress-value 
-{
-	/* Gradient background with Stripes */
-	background-image:
-	-webkit-linear-gradient( 135deg,
-													 transparent,
-													 transparent 33%,
-													 rgba(0,0,0,.1) 33%,
-													 rgba(0,0,0,.1) 66%,
-													 transparent 66%),
-    -webkit-linear-gradient( top,
-														rgba(255, 255, 255, .25),
-														rgba(0,0,0,.2)),
-     -webkit-linear-gradient( left, #09c, #ff0);
-}
-
-.jquery::-webkit-progress-value,
-.node-js::-webkit-progress-value 
-{
-	/* Gradient background with Stripes */
-	background-image:
-	-webkit-linear-gradient( 135deg,
-													 transparent,
-													 transparent 33%,
-													 rgba(0,0,0,.1) 33%,
-													 rgba(0,0,0,.1) 66%,
-													 transparent 66%),
-    -webkit-linear-gradient( top,
-														rgba(255, 255, 255, .25),
-														rgba(0,0,0,.2)),
-     -webkit-linear-gradient( left, #09c, #690);
-}
-
-/* Similarly, for Mozillaa. Unfortunately combining the styles for different browsers will break every other browser. Hence, we need a separate block. */
-
-.html5::-moz-progress-bar,
-.php::-moz-progress-bar {
-	/* Gradient background with Stripes */
-	background-image:
-	-moz-linear-gradient( 135deg,
-													 transparent,
-													 transparent 33%,
-													 rgba(0,0,0,.1) 33%,
-													 rgba(0,0,0,.1) 66%,
-													 transparent 66%),
-    -moz-linear-gradient( top,
-														rgba(255, 255, 255, .25),
-														rgba(0,0,0,.2)),
-     -moz-linear-gradient( left, #09c, #f44);
-}
-
-.css3::-moz-progress-bar,
-.php::-moz-progress-bar {
-{
-	/* Gradient background with Stripes */
-	background-image:
-	-moz-linear-gradient( 135deg,
-													 transparent,
-													 transparent 33%,
-													 rgba(0,0,0,.1) 33%,
-													 rgba(0,0,0,.1) 66%,
-													 transparent 66%),
-    -moz-linear-gradient( top,
-														rgba(255, 255, 255, .25),
-														rgba(0,0,0,.2)),
-     -moz-linear-gradient( left, #09c, #ff0);
-}
-
-.jquery::-moz-progress-bar,
-.node-js::-moz-progress-bar {
-	/* Gradient background with Stripes */
-	background-image:
-	-moz-linear-gradient( 135deg,
-													 transparent,
-													 transparent 33%,
-													 rgba(0,0,0,.1) 33%,
-													 rgba(0,0,0,.1) 66%,
-													 transparent 66%),
-    -moz-linear-gradient( top,
-														rgba(255, 255, 255, .25),
-														rgba(0,0,0,.2)),
-     -moz-linear-gradient( left, #09c, #690);
-}
-
-/* Now we are good to duplicate html code for other skills and then add the css code for the new skill based on data-skill */
-
-  
-/* THE END */
 
 
 
@@ -824,89 +678,67 @@ p[data-value]:after {
     <section id="skills">
       <div class="skills">
         <h1>| Skills</h1>
-        <ul>
-          <li>
-            <h2>Frontend</h2>
-
-            <!-- HTML5 -->
-            <p style="width:80%"
-              data-value="80">HTML5</p>
-            <progress max="100" value="80"
-              class="html5">
-              <!-- Browsers that support HTML5 progress element will ignore the html inside `progress` element. Whereas older browsers will ignore the `progress` element and instead render the html inside it. -->
-              <div class="progress-bar">
-                <span
-                  style="width: 80%">80%</span>
-              </div>
-            </progress>
-
-            <!-- CSS3 -->
-            <p style="width:60%"
-              data-value="60">CSS3</p>
-            <progress max="100" value="60"
-              class="css3">
-              <!-- Browsers that support HTML5 progress element will ignore the html inside `progress` element. Whereas older browsers will ignore the `progress` element and instead render the html inside it. -->
-              <div class="progress-bar">
-                <span
-                  style="width: 60%">60%</span>
-              </div>
-            </progress>
-
-            <!-- jQuery -->
-            <p style="width:50%"
-              data-value="50">jQuery</p>
-            <progress max="100" value="50"
-              class="jquery">
-              <!-- Browsers that support HTML5 progress element will ignore the html inside `progress` element. Whereas older browsers will ignore the `progress` element and instead render the html inside it. -->
-              <div class="progress-bar">
-                <span
-                  style="width: 50%">50%</span>
-              </div>
-            </progress>
-
-          </li>
-          <li>
-            <h2>Backend</h2>
-
-            <!-- Python -->
-            <p style="width:75%"
-              data-value="75">Python</p>
-            <progress max="100" value="75"
-              class="python">
-              <!-- Browsers that support HTML5 progress element will ignore the html inside `progress` element. Whereas older browsers will ignore the `progress` element and instead render the html inside it. -->
-              <div class="progress-bar">
-                <span
-                  style="width: 75%">75%</span>
-              </div>
-            </progress>
-
-            <!-- PHP -->
-            <p style="width:65%"
-              data-value="65">PHP</p>
-            <progress max="100" value="65"
-              class="php">
-              <!-- Browsers that support HTML5 progress element will ignore the html inside `progress` element. Whereas older browsers will ignore the `progress` element and instead render the html inside it. -->
-              <div class="progress-bar">
-                <span
-                  style="width: 65%">65%</span>
-              </div>
-            </progress>
-
-            <!-- Node.js -->
-            <p style="width:35%"
-              data-value="35">Node.js</p>
-            <progress max="100" value="35"
-              class="node-js">
-              <!-- Browsers that support HTML5 progress element will ignore the html inside `progress` element. Whereas older browsers will ignore the `progress` element and instead render the html inside it. -->
-              <div class="progress-bar">
-                <span
-                  style="width: 35%">35%</span>
-              </div>
-            </progress>
-
-          </li>
-        </ul>
+        <div class="outer-Container">
+          <div class="h2">Design</div>
+          <div class="h2">Code</div>
+          <div class="h2"></div>
+          <div class="iner-wrapper">
+            <div class="skill-bar">
+              <div class="info"><span>Photoshop</span></div>
+              <div class="progress-bar html"><span></span></div>
+            </div>
+            <div class="skill-bar">
+              <div class="info"><span>Premiere Pro</span></div>
+              <div class="progress-bar css"><span></span></div>
+            </div>
+            <div class="skill-bar">
+              <div class="info"><span>Illustrator</span></div>
+              <div class="progress-bar javascript"><span></span></div>
+            </div>
+            <div class="skill-bar">
+              <div class="info"><span>Canva</span></div>
+              <div class="progress-bar bootstrap"><span></span></div>
+            </div>
+          </div>
+      
+          <div class="iner-wrapper">
+            <div class="skill-bar">
+              <div class="info"><span>HTML</span></div>
+              <div class="progress-bar html"><span></span></div>
+            </div>
+            <div class="skill-bar">
+              <div class="info"><span>CSS</span></div>
+              <div class="progress-bar css"><span></span></div>
+            </div>
+            <div class="skill-bar">
+              <div class="info"><span>JavaScript</span></div>
+              <div class="progress-bar javascript"><span></span></div>
+            </div>
+            <div class="skill-bar">
+              <div class="info"><span>SQL</span></div>
+              <div class="progress-bar bootstrap"><span></span></div>
+            </div>
+          </div>
+          <div class="iner-wrapper">
+            <div class="skill-bar">
+              <div class="info"><span>HTML</span></div>
+              <div class="progress-bar html"><span></span></div>
+            </div>
+            <div class="skill-bar">
+              <div class="info"><span>CSS</span></div>
+              <div class="progress-bar css"><span></span></div>
+            </div>
+            <div class="skill-bar">
+              <div class="info"><span>JavaScript</span></div>
+              <div class="progress-bar javascript"><span></span></div>
+            </div>
+            <div class="skill-bar">
+              <div class="info"><span>Bootstrap</span></div>
+              <div class="progress-bar bootstrap"><span></span></div>
+            </div>
+          </div>
       </div>
+    </div>
     </section>
 
     <section id="services">
