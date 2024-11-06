@@ -14,8 +14,16 @@
   <link rel="manifest" href="/Img/site.webmanifest" />
   <link rel="icon" type="image/png" sizes="32x32" href="Img/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="Img/favicon-16x16.png" />
-
-
+  <script>$(".animated-progress span").each(function () {
+    $(this).animate(
+      {
+        width: $(this).attr("data-progress") + "%",
+      },
+      1000
+    );
+    $(this).text($(this).attr("data-progress") + "%");
+  });
+  </script>
 
 </head>
 <style>
@@ -248,6 +256,41 @@
     flex-direction: column;
 }
 
+.skills .animated-progress {
+  width: 300px;
+  height: 30px;
+  border-radius: 5px;
+  margin: 20px 10px;
+  border: 1px solid #f0737f;
+  overflow: hidden;
+  position: relative;
+  
+}
+
+.skills .animated-progress span {
+  height: 100%;
+  display: block;
+  width: 0;
+  color: rgb(255, 251, 251);
+  line-height: 30px;
+  position: absolute;
+  text-align: end;
+  padding-right: 5px;
+}
+
+.skills .progress-blue span {
+  background-color: #ffb5c2;
+}
+.skills .progress-green span {
+  background-color: #fec0cb;
+}
+.skills .progress-purple span {
+  background-color: #fecbd4;
+}
+.skills .progress-red span {
+  background-color: #fdd7de;
+}
+
 .skills h1 {
     font-size: 60px;
     margin: 0px;
@@ -297,7 +340,7 @@
   }
 
   .contact {
-    padding-left: 80px;
+  padding-left: 80px;
   padding-top: 40px;
     padding-bottom: 40px;
     text-align: left;
@@ -508,8 +551,8 @@
   <section id="about">
     <div class="about">
       <h1>| About Me</h1>
-      <p> I am a versatile digital marketer and designer with a unique blend of creative and strategic expertise. With a
-        sharp eye for design and a strong foundation in marketing principles, I am able to craft compelling campaigns
+      <p> I am 28 years old this year with a bachelor's degree in marketing. I pride myself on being a versatile digital marketer and designer with a unique blend of creative and strategic expertise. My
+        sharp eye for design and strong foundation in marketing principles allows me to craft compelling campaigns
         that not only look stunning but also drive results. From social media strategy and content creation to web
         design and branding, I understand how to communicate a brand’s message effectively across various digital
         platforms.</p>
@@ -529,6 +572,18 @@
 
   <section id="skills">
     <div class="skills">
+      <div class="animated-progress progress-blue">
+        <span data-progress="45"></span>
+      </div>
+      <div class="animated-progress progress-green">
+        <span data-progress="60"></span>
+      </div>
+      <div class="animated-progress progress-purple">
+        <span data-progress="70"></span>
+      </div>
+      <div class="animated-progress progress-red">
+        <span data-progress="85"></span>
+      </div>
       <h1></h1>
       <p></p>
     </div>
