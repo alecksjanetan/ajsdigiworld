@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Send the email
     if (mail($to, $subject, $emailBody, $headers)) {
-        echo "<h3>Thank you! Your message has been sent.</h3>";
+        echo "<h3 style=font-family: 'Lexique'; font-size: 30px; color: #f0737f;>Thank you! Your message has been sent.</h3>";
     } else {
         echo "<h3>Sorry, there was an issue sending your message. Please try again later.</h3>";
     }
