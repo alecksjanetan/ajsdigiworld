@@ -85,6 +85,31 @@
     text-decoration: underline;
   }
 
+  .nav-menu ul {
+    list-style: none;
+    display: flex;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    padding: 10px 20px;
+    color: #333;
+}
+
+/* Hide Menu and Show Hamburger Icon on Mobile */
+.menu-icon {
+    display: none; /* Hidden on desktop */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 4px 0;
+}
+
   .header {
     padding: 80px;
     text-align: left;
@@ -1140,7 +1165,19 @@
   }
 
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 500px) {
+  p {
+      font-size: 18px !important;
+    }
+    
+    h1 {
+      font-size: 30px !important;
+    }
+
+    h2 {
+      font-size: 22px !important;
+    }
+
     .navbar {
       float: none;
       width: 100%;
@@ -1148,14 +1185,495 @@
       flex-direction: column;
       align-content: center;
       align-items: center;
+      padding-bottom: 30px;
+    }
+.menu-icon {
+        display: flex; /* Show the hamburger icon */
     }
 
+    .nav-menu {
+        display: none; /* Hide the menu initially */
+        flex-direction: column;
+        width: 100%;
+        background-color: #f8f8f8;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        
+    }
+
+    .nav-menu.active {
+        display: flex; /* Show menu when active */
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+    }
+
+    .nav-menu ul li a {
+        padding: 15px;
+        text-align: center;
+        display: block;
+        width: 100%;
+    }
     .header {
       padding: 40px;
     }
 
     .header h1 {
       font-size: 30px;
+    }
+    .header p {
+      font-size: 25px;
+      margin-top: 10px;
+      max-width: 100%;
+      line-height: 1.3;
+      font-family: 'Lexique';
+      display: flex;
+      justify-content: left;
+      flex-direction: column;
+      align-content: left;
+      flex-wrap: nowrap;
+      align-items: left;
+      text-align: left;
+      background-color: rgb(240, 115, 127, 0);
+    }
+
+    .btn a {
+      background-color: #f0737f;
+      color: white;
+      padding: 8px 15px;
+      border: none;
+      border-radius: 16px;
+      text-align: center;
+      text-decoration: none !important;
+      font-size: 18px;
+      font-family: 'Lexique';
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      width: 130px;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      margin-top: none !important;
+    }
+
+    .about {
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-top: 40px;
+      padding-bottom: 0px;
+      text-align: left;
+      color: #f0737f;
+      background-color: #fcedf0;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .about h1 {
+      font-size: 60px;
+      margin: 0px;
+      font-family: 'Lexique';
+      padding-left: 80px;
+    }
+
+    .about p {
+      font-size: 30px;
+      margin-top: 20px;
+      max-width: %;
+      line-height: 1.3;
+      font-family: 'Lexique';
+      padding-left: 80px;
+    }
+
+    .experiences {
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-top: 10px;
+      padding-bottom: 0px;
+      text-align: left;
+      color: #f0737f;
+      background-color: #fcedf0;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .experiences .grid {
+      display: grid;
+      align-content: left;
+      grid-template-columns: 33% 33% 33%;
+      gap: 10px;
+      margin-top: -10px;
+      max-width: 90%;
+    }
+
+    .experiences>div {
+      background-color: none;
+      text-align: left;
+      padding-left: 80px;
+      
+    }
+
+    .experiences h1 {
+      font-size: 60px;
+      margin: 0px;
+      font-family: 'Lexique';
+      margin-bottom: 10px;
+      padding-left: 0px;
+
+    }
+
+    .experiences h2 {
+      font-size: 40px;
+      padding: 0px;
+      margin-bottom: 0px;
+      max-width: 100%;
+    }
+
+    .experiences p {
+      font-size: 30px;
+      margin-top: 5px;
+      max-width: 100%;
+      line-height: 1.3;
+      font-family: 'Lexique';
+      padding: 00px;
+    }
+
+    .skills {
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-top: 20px;
+      padding-bottom: px;
+      text-align: left;
+      color: #f0737f;
+      background-color: #fcedf0;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      max-height: 800px;
+    }
+
+    .outer-Container {
+      padding-left: 80px;
+      margin-top: 20px;
+      display: grid;
+      align-content: left;
+      max-width: 90%;
+      grid-template-columns: 30% 30% 30%;
+      grid-template-rows: auto auto;
+
+      row-gap: 10px;
+    }
+
+      .outer-Container .h2 {
+      font-size: 22px;
+      padding-left: 0px;
+      margin-bottom: 0px;
+      font-weight: 700;
+    }
+
+    .iner-wrapper {
+      padding: 0px 30px 30px 30px;
+      background-color: #fcedf0;
+      width: 100%;
+      height: auto;
+      -webkit-box-shadow: 1px 3px 8px 0px #f0737f;
+      box-shadow: 1px 3px 8px 0px #f0737f;
+    }
+
+    .skill-bar .info span {
+      display: inline-block;
+      margin: 30px 0px 0px 0px;
+      font-size: 18px;
+      font-weight: 500;
+      color: #f0737f;
+    }
+
+    .progress-bar {
+      position: relative;
+      overflow: hidden;
+      margin: 3px 0px;
+      width: 100%;
+      height: 8px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      -webkit-transform: scaleX(0);
+      -ms-transform: scaleX(0);
+      transform: scaleX(0);
+      -webkit-transform-origin: left;
+      -ms-transform-origin: left;
+      transform-origin: left;
+      -webkit-animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+      animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+    }
+
+    .progress-bar span {
+      position: absolute;
+      background: #000;
+      width: 100%;
+      height: 8px;
+      border-radius: 10px;
+      -webkit-transform: scaleX(0);
+      -ms-transform: scaleX(0);
+      transform: scaleX(0);
+      -webkit-transform-origin: left;
+      -ms-transform-origin: left;
+      transform-origin: left;
+      -webkit-animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+      animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+    }
+
+    @-webkit-keyframes animate {
+      100% {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+      }
+    }
+
+    @keyframes animate {
+      100% {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+      }
+    }
+
+    .html span {
+      width: 100%;
+      background: #ffb5c2;
+    }
+
+    .css span {
+      width: 95%;
+      background: #fec0cb;
+    }
+
+    .javascript span {
+      width: 70%;
+      background: #ffd7de;
+    }
+
+    .sql span {
+      width: 80%;
+      background: #fecbd4;
+    }
+
+    .photoshop span {
+      width: 100%;
+      background: #ffb5c2;
+    }
+
+    .canva span {
+      width: 100%;
+      background: #fec0cb;
+    }
+
+    .premiere span {
+      width: 95%;
+      background: #fecbd4;
+    }
+
+    .illustrator span {
+      width: 90%;
+      background: #ffd7de;
+    }
+
+    .seo span {
+      width: 90%;
+      background: #fecbd4;
+    }
+
+    .email span {
+      width: 95%;
+      background: #fec0cb;
+    }
+
+    .social span {
+      width: 100%;
+      background: #ffb5c2;
+    }
+
+    .affiliate span {
+      width: 85%;
+      background: #ffd7de;
+    }
+
+    .skills h1 {
+      font-size: 60px;
+      margin: 0px;
+      font-family: 'Lexique';
+      padding-left: 80px;
+    }
+
+    .skills h2 {
+      font-size: 40px;
+      padding-left: 80px;
+      margin-bottom: 0px;
+    }
+
+    .skills p {
+      font-size: 30px;
+      margin-top: 20px;
+      max-width: 70%;
+      line-height: 1.3;
+      font-family: 'Lexique';
+      padding-left: 80px;
+    }
+
+    .services {
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-top: 10px;
+      padding-bottom: 0px;
+      text-align: left;
+      color: #f0737f;
+      background-color: #fcedf0;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      max-height: 0%;
+    }
+
+    .services .grid {
+      margin-top: 0px;
+      display: grid;
+      align-content: left;
+      max-width: 90%;
+      max-height: 50%;
+      grid-template-columns: 30% 30% 30%;
+      grid-template-rows: auto auto;
+      row-gap: 0px;
+      padding-left: 80px;
+    }
+
+    .grid div {
+      background-color: none;
+      text-align: left;
+      padding: 10px;
+
+    }
+
+    .services h1 {
+      font-size: 60px;
+      margin: 0px;
+      font-family: 'Lexique';
+    }
+
+    .services h2 {
+      font-size: 40px;
+      margin-bottom: 0px;
+      max-width: 100%;
+      padding-left: 0px;
+    }
+
+    .services p {
+      font-size: 30px;
+      max-width: 100%;
+      line-height: 1.3;
+      font-family: 'Lexique';
+      padding-left: 0px;
+    }
+
+    .contact {
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-top: 0px;
+      padding-bottom: 30px;
+      text-align: left;
+      color: #f0737f;
+      background-color: #fcedf0;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      max-height: 100%;
+    }
+
+    .contact .icons {
+      display: grid;
+      grid-template-columns: auto auto;
+      font-size: 25px;
+      padding-left: 80px;
+      justify-content: center;
+      justify-items: center;
+      width: 90%;
+    }
+
+    .contact a {
+      padding-left: 80px;
+      font-size: 22px;
+    }
+
+    .contact h1 {
+      font-size: 60px;
+      margin: 0px;
+      font-family: 'Lexique';
+      padding-left: 80px;
+      padding-bottom: 20px;
+    }
+
+    .contact p {
+      font-size: 22px;
+      margin-top: 5px;
+      max-width: 50%;
+      line-height: 1.3;
+      font-family: 'Lexique';
+      padding-left: 80px;
+    }
+
+    .contact form {
+      width: 100%;
+      max-width: 500px;
+      padding-left: 80px;
+      font-size: 22px;
+      padding-top: 20px;
+    }
+
+    .contact label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    .contact input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #f0737f;
+      border-radius: 4px;
+      font-family: 'Lexique';
+      font-size: 22px;
+      color: #ffb5c2;
+    }
+
+    .contact input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 15px;
+      background-color: #f0737f;
+      color: white;
+      border: none;
+      border-radius: 16px;
+      cursor: pointer;
+      font-family: 'Lexique';
+      font-size: 22px;
+    }
+
+    .contact input[type="submit"]:hover {
+      background-color: #fcedf0;
+      color: #f0737f;
+      padding: 10px 20px;
+      border: #f0737f solid 2px;
+      border-radius: 16px;
+    }
+
+
+    .footer {
+      font-size: 20px;
     }
   }
 </style>
@@ -1165,11 +1683,20 @@
   <div class="navbar">
     <a href="https://alecksjanetan.github.io/ajsdigiworld/"><img src="https://i.ibb.co/DzvNLPW/Pink-AJ-Letter-Logo-2.png"
         width="50" height="50"></a>
-    <a href="#about" class="right">About</a>
-    <a href="#experiences" class="right">Experiences</a>
-    <a href="#skills" class="right">Skills</a>
-    <a href="#services" class="right">Services</a>
-    <a href="#contact" class="right">Contact</a>
+    <div class="menu-icon" onclick="toggleMenu()"> <!-- Hamburger icon for mobile -->
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experiences">Experiences</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </div>
 
   <div class="header">
@@ -1355,7 +1882,10 @@
   </div>
 
   <script src='https://raw.github.com/LeaVerou/HTML5-Progress-polyfill/master/progress-polyfill.min.js'></script>
-
+function toggleMenu() {
+const navMenu = document.querySelector('.nav-menu');
+navMenu.classList.toggle('active');
+}
 </body>
 
 </html>
