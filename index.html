@@ -88,37 +88,39 @@
   .nav-menu ul {
     list-style: none;
     display: flex;
-}
+  }
 
-.nav-menu ul li a {
+  .nav-menu ul li a {
     text-decoration: none;
     padding: 10px 20px;
     color: #f0737f;
-}
+  }
 
-/* Hide Menu and Show Hamburger Icon on Mobile */
-.menu-icon {
-    display: none; /* Hidden on desktop */
+  /* Hide Menu and Show Hamburger Icon on Mobile */
+  .menu-icon {
+    display: none;
+    /* Hidden on desktop */
     flex-direction: column;
     cursor: pointer;
-}
+  }
 
-.menu-icon .bar {
+  .menu-icon .bar {
     width: 25px;
     height: 3px;
     background-color: #f0737f;
     margin: 4px 0;
-}
+  }
 
-.nav-menu.active {
-    display: flex; /* Displayed when .active is toggled */
+  .nav-menu.active {
+    display: flex;
+    /* Displayed when .active is toggled */
     flex-direction: column;
     width: 100%;
     background-color: #f8f8f8;
     position: absolute;
     top: 60px;
     left: 0;
-}
+  }
 
   .header {
     padding: 80px;
@@ -466,6 +468,31 @@
     max-height: 800px;
   }
 
+  .collapsible-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Collapsible content hidden by default */
+.collapsible-content {
+  display: none;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+}
+
+/* Toggle button styles */
+.collapsible-toggle {
+  width: 100%;
+  padding: 15px;
+  text-align: left;
+  font-size: 16px;
+  background-color: #fdd7de;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
   .services .grid {
     padding-left: 0px;
     margin-top: 40px;
@@ -657,7 +684,7 @@
     p {
       font-size: 18px !important;
     }
-    
+
     h1 {
       font-size: 30px !important;
     }
@@ -695,7 +722,7 @@
       padding-top: 20px;
       padding-left: 40px;
       padding-right: 40px;
-     display: flex;
+      display: flex;
       justify-content: center;
       flex-direction: column;
       align-items: flex-start;
@@ -716,7 +743,7 @@
       align-items: left;
       text-align: left;
       background-color: rgb(240, 115, 127, 0);
-      
+
       font-weight: 700;
     }
 
@@ -813,7 +840,7 @@
       background-color: none;
       text-align: left;
       padding-left: 80px;
-      
+
     }
 
     .experiences h1 {
@@ -867,7 +894,7 @@
       row-gap: 10px;
     }
 
-      .outer-Container .h2 {
+    .outer-Container .h2 {
       font-size: 22px;
       padding-left: 0px;
       margin-bottom: 0px;
@@ -1176,10 +1203,10 @@
 
 
   @media screen and (max-width: 768px) {
-  p {
+    p {
       font-size: 15px !important;
     }
-    
+
     h1 {
       font-size: 25px !important;
     }
@@ -1197,46 +1224,50 @@
       align-items: center;
       padding-bottom: 30px;
     }
-    
-.menu-icon {
-        display: flex; /* Show the hamburger icon */
-        color: #f0737f;
+
+    .menu-icon {
+      display: flex;
+      /* Show the hamburger icon */
+      color: #f0737f;
     }
 
     .nav-menu {
-        display: none; /* Hide the menu initially */
-        flex-direction: column;
-        width: 100%;
-        background-color: #fcedf0;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        font-family: 'Lexique';
-        color: #f0737f;
+      display: none;
+      /* Hide the menu initially */
+      flex-direction: column;
+      width: 100%;
+      background-color: #fcedf0;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      font-family: 'Lexique';
+      color: #f0737f;
     }
 
     .nav-menu.active {
-        display: flex; /* Show menu when active */
-        flex-direction: column;
-    width: 100%;
-    background-color: #f8f8f8;
-    position: absolute;
-    top: 60px;
-    left: 0;
+      display: flex;
+      /* Show menu when active */
+      flex-direction: column;
+      width: 100%;
+      background-color: #f8f8f8;
+      position: absolute;
+      top: 60px;
+      left: 0;
     }
 
     .nav-menu ul {
-        flex-direction: column;
-                margin: 0px !important;
-        padding-inline-start: 0px !important;
+      flex-direction: column;
+      margin: 0px !important;
+      padding-inline-start: 0px !important;
     }
 
     .nav-menu ul li a {
-        padding: 15px;
-        text-align: center;
-        display: block;
-        width: 100%;
+      padding: 15px;
+      text-align: center;
+      display: block;
+      width: 100%;
     }
+
     .header {
       padding: 0px;
     }
@@ -1263,11 +1294,11 @@
       padding-left: 40px;
     }
 
-  .btn {
-    margin-left: none;
-    margin-right: none;
-    padding-left: 40px;
-  }
+    .btn {
+      margin-left: none;
+      margin-right: none;
+      padding-left: 40px;
+    }
 
     .btn a {
       background-color: #f0737f;
@@ -1289,7 +1320,7 @@
       padding-left: 40px;
       padding-right: 40px;
       padding-top: 40px;
-      padding-bottom: 0px;
+      padding-bottom: 10px;
       text-align: left;
       color: #f0737f;
       background-color: #fcedf0;
@@ -1306,12 +1337,12 @@
       margin: 0px;
       font-family: 'Lexique';
       padding-left: 0px;
-      
+
     }
 
     .about p {
       font-size: 30px;
-      margin-top: 20px;
+      margin-top: 10px;
       max-width: 95%;
       line-height: 1.3;
       font-family: 'Lexique';
@@ -1320,10 +1351,10 @@
     }
 
     .experiences {
-   padding-left: 0px;
-   padding-right: 0px;
+      padding-left: 0px;
+      padding-right: 0px;
       padding-top: 10px;
-      padding-bottom: 0px;
+      padding-bottom: 10px;
       text-align: left;
       color: #f0737f;
       background-color: #fcedf0;
@@ -1336,17 +1367,18 @@
       display: grid;
       align-content: left;
       grid-template-rows: 30% 30% 30%;
-      column-gap: 1px;
-      margin-top: -10px;
+      /* column-gap: 1px; */
+      grid-template-columns: 100%;
+      margin-top: -20px;
       max-width: 90%;
-          padding-left: 30px;
+      padding-left: 30px;
     }
 
     .experiences>div {
       background-color: none;
       text-align: left;
       padding-left: 40px;
-      
+
     }
 
     .experiences h1 {
@@ -1377,7 +1409,7 @@
     .skills {
       padding-left: 0px;
       padding-right: 0px;
-      padding-top: 20px;
+      padding-top: 40px;
       padding-bottom: px;
       text-align: left;
       color: #f0737f;
@@ -1390,7 +1422,7 @@
 
     .outer-Container {
       padding-left: 40px;
-      margin-top: 20px;
+      margin-top: 15px;
       display: grid;
       align-content: left;
       max-width: 90%;
@@ -1400,7 +1432,7 @@
       row-gap: 10px;
     }
 
-      .outer-Container .h2 {
+    .outer-Container .h2 {
       font-size: 18px !important;
       padding-left: 0px;
       margin-bottom: 0px;
@@ -1558,7 +1590,7 @@
       padding-left: 0px;
       padding-right: 0px;
       padding-top: 10px;
-      padding-bottom: 0px;
+      padding-bottom: 40px;
       text-align: left;
       color: #f0737f;
       background-color: #fcedf0;
@@ -1568,9 +1600,20 @@
       max-height: 0%;
     }
 
+      .collapsible {
+    display: block;
+    margin-top: 10px;
+    width: 90%;
+    padding-left: 40px;
+  }
+
+    .collapsible .collapsible-content {
+       font-family: 'Lexique';
+    }
+
     .services .grid {
       margin-top: 0px;
-      display: grid;
+      display: none;
       align-content: left;
       max-width: 90%;
       max-height: 100%;
@@ -1854,8 +1897,8 @@
           </div>
         </div>
       </div>
-      </div>
-      </section>
+    </div>
+    </section>
 
   <section id="services">
     <div class="services">
@@ -1886,6 +1929,49 @@
           <p>・Influencer Outreach<br>・Affiliate Program Setup<br>・Tracking & Performance Analysis</p>
         </div>
       </div>
+      <div class="collapsible-container">
+        <div class="collapsible">
+          <button class="collapsible-toggle">Social Media Marketing</button>
+          <div class="collapsible-content">
+            <p>・Social Media Management<br>・Social Strategy Development<br>・Audience Engagement</p>
+          </div>
+        </div>
+      
+        <div class="collapsible">
+          <button class="collapsible-toggle">Email Marketing</button>
+          <div class="collapsible-content">
+            <p>・Email Campaign Management<br>・Automated Email Sequences<br>・List Building & Segmentation</p>
+          </div>
+        </div>
+      
+        <div class="collapsible">
+          <button class="collapsible-toggle">Website & Landing Page</button>
+          <div class="collapsible-content">
+            <p>・Website Design & Optimization<br>・Landing Page Optimization</p>
+          </div>
+        </div>
+      
+        <div class="collapsible">
+          <button class="collapsible-toggle">Pay-Per-Click Advertising</button>
+          <div class="collapsible-content">
+            <p>・Google Ads<br>・Social Media Ads<br>・Remarketing (Retargeting)</p>
+          </div>
+        </div>
+      
+        <div class="collapsible">
+          <button class="collapsible-toggle">Analytics & Reporting</button>
+          <div class="collapsible-content">
+            <p>・Performance Tracking<br>・Campaign Reporting<br>・Data-Driven Strategy</p>
+          </div>
+        </div>
+      
+        <div class="collapsible">
+          <button class="collapsible-toggle">Influencer & Affiliate Marketing</button>
+          <div class="collapsible-content">
+            <p>・Influencer Outreach<br>・Affiliate Program Setup<br>・Tracking & Performance Analysis</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -1913,7 +1999,7 @@
   </div>
 
   <script src='https://raw.github.com/LeaVerou/HTML5-Progress-polyfill/master/progress-polyfill.min.js'></script>
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
