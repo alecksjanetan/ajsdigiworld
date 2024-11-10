@@ -469,16 +469,22 @@
   }
 
   .collapsible-container {
-  max-width: 600px;
+    max-width: 600px;
   margin: 0 auto;
+}
+
+.collapsible {
+    display: none;
 }
 
 /* Collapsible content hidden by default */
 .collapsible-content {
   display: none;
   padding: 10px;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
+  background-color: #fdd7de;
+  border: 0px solid #ddd;
+  font-size: 15px;
+
 }
 
 /* Toggle button styles */
@@ -486,9 +492,10 @@
   width: 100%;
   padding: 15px;
   text-align: left;
-  font-size: 16px;
-  background-color: #fdd7de;
-  color: white;
+  font-size: 18px;
+  font-family: 'Lexique';
+  background-color: #fde2e7;
+  color: #f0737f;
   border: none;
   cursor: pointer;
 }
@@ -1607,9 +1614,27 @@
     padding-left: 40px;
   }
 
-    .collapsible .collapsible-content {
-       font-family: 'Lexique';
-    }
+.collapsible-content {
+  display: none;
+  padding: 10px;
+  background-color: #fdd7de;
+  border: 0px solid #ddd;
+  font-size: 15px;
+
+}
+
+/* Toggle button styles */
+.collapsible-toggle {
+  width: 100%;
+  padding: 15px;
+  text-align: left;
+  font-size: 18px;
+  font-family: 'Lexique';
+  background-color: #fde2e7;
+  color: #f0737f;
+  border: none;
+  cursor: pointer;
+}
 
     .services .grid {
       margin-top: 0px;
