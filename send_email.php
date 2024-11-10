@@ -1,30 +1,42 @@
 
 
+
+
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = htmlspecialchars($_POST['name']);
-    $email = htmlspecialchars($_POST['email']);
-    $message = htmlspecialchars($_POST['message']);
+// Load PHPMailer classes
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
-    // Email information
-    $to = "contact-me@ajsdigiworld.com";
-    $subject = "New message from $name";
-    $headers = "From: $email" . "\r\n" .
-               "Reply-To: $email" . "\r\n" .
-               "Content-Type: text/plain; charset=UTF-8";
+require 'path/to/PHPMailer/src/Exception.php';
+require 'path/to/PHPMailer/src/PHPMailer.php';
+require 'path/to/PHPMailer/src/SMTP.php';
 
-    // The email content
-    $body = "You have received a new message from $name.\n\n";
-    $body .= "Email: $email\n\n";
-    $body .= "Message:\n$message\n";
+// Create a new instance of PHPMailer
+$mail = new PHPMailer(true);
 
-    // Send email
-    if (mail($to, $subject, $body, $headers)) {
-        echo "Message sent successfully!";
-    } else {
-        echo "There was an error sending your message.";
-    }
-} else {
-    echo "Invalid request.";
+try {
+    // Server settings
+    $mail->isSMTP();
+    $mail->Host       = 'mail.ajsdigiworld.com';  // Bluehost SMTP server
+    $mail->SMTPAuth   = true;
+    $mail->Username   = 'contact-me@ajsdigiworld.com';  // Your Bluehost email
+    $mail->Password   = 'ArdnaxelaNat!0712';          // Your email password
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Enable TLS encryption
+    $mail->Port       = 587;                            // SMTP port
+
+    // Recipients
+    $mail->setFrom('contact-me@ajsdigiworld.com', 'Your Name');
+    $mail->addAddress('contact-me@ajsdigiworld.com', 'Contact Me'); // Add recipient
+
+    // Content
+    $mail->isHTML(true);                                  
+    $mail->Subject = 'Form Submission';
+    $mail->Body    = '<b>This is a test message sent from PHPMailer!</b>';
+    $mail->AltBody = 'This is a test message sent from PHPMailer!';
+
+    // Send the email
+    $mail->send();
+    echo 'Message has been sent successfully';
+} catch (Exception $e) {
+    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
-?>
