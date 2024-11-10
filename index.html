@@ -612,7 +612,7 @@
     color: #ffb5c2;
   }
 
-  .contact input[type="submit"] {
+  .contact button {
     width: 100%;
     padding: 10px;
     margin-top: 15px;
@@ -625,7 +625,7 @@
     font-size: 30px;
   }
 
-  .contact input[type="submit"]:hover {
+  .contact button:hover {
     background-color: #fcedf0;
     color: #f0737f;
     padding: 10px 20px;
@@ -1181,7 +1181,7 @@
       color: #ffb5c2;
     }
 
-    .contact input[type="submit"] {
+    .contact button {
       width: 100%;
       padding: 10px;
       margin-top: 15px;
@@ -1194,7 +1194,7 @@
       font-size: 22px;
     }
 
-    .contact input[type="submit"]:hover {
+    .contact button:hover {
       background-color: #fcedf0;
       color: #f0737f;
       padding: 10px 20px;
@@ -1741,7 +1741,7 @@
       color: #ffb5c2;
     }
 
-    .contact input[type="submit"] {
+    .contact button {
       width: 90%;
       padding: 10px;
       margin-top: 15px;
@@ -1754,7 +1754,7 @@
       font-size: 18px;
     }
 
-    .contact input[type="submit"]:hover {
+    .contact button:hover {
       background-color: #fcedf0;
       color: #f0737f;
       padding: 10px 20px;
@@ -2000,14 +2000,17 @@
       <a href="https://www.linkedin.com/in/alex-jane-tan-6686a513a/"><i class="fa-brands fa-linkedin"
           style="color: #f0737f;"></i>
       </a>
-      <form action="send_email.php" method="post">
+  <form action="send_email.php" method="POST">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>
+      
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required>
+      
         <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
-        <input type="submit" value="Send Message">
+        <textarea id="message" name="message" required></textarea>
+        
+        <button type="submit">Send</button>
       </form>
   </section>
 
