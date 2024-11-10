@@ -543,7 +543,7 @@
 
   .contact {
     padding-left: 80px;
-    padding-top: 0px;
+    padding-top: 20px;
     padding-bottom: 40px;
     text-align: left;
     color: #f0737f;
@@ -574,7 +574,7 @@
     margin: 0px;
     font-family: 'Lexique';
     padding-left: 80px;
-    padding-bottom: 30px;
+    padding-bottom: 0px;
   }
 
   .contact p {
@@ -585,54 +585,93 @@
     font-family: 'Lexique';
     padding-left: 80px;
   }
-
-  .contact form {
-    width: 100%;
-    max-width: 500px;
+#fs-frm {
+    max-width: 90%;
     padding-left: 80px;
-    font-size: 30px;
-    padding-top: 30px;
-  }
+    font-family: 'Lexique';
+    padding-top: 0px;
+    color: #f0737f;
+    font-size: 40px;
+}
 
-  .contact label {
+/* Fieldset styling */
+#fs-frm-inputs {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Label styling */
+#fs-frm label {
     display: block;
-    margin-top: 10px;
-  }
+    margin-top: 15px;
+    font-weight: bold;
+    color: #f0737f;
+}
 
-  .contact input[type="text"],
-  input[type="email"],
-  textarea {
+/* Input and textarea styling */
+#fs-frm input[type="text"],
+#fs-frm input[type="email"],
+#fs-frm textarea {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
-    border: 1px solid #f0737f;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
     border-radius: 4px;
-    font-family: 'Lexique';
-    font-size: 30px;
-    color: #ffb5c2;
-  }
+    font-size: 16px;
+    color: #f0737f;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
 
-  .contact button {
+#fs-frm input[type="text"]:focus,
+#fs-frm input[type="email"]:focus,
+#fs-frm textarea:focus {
+    border-color: #fcedf0;
+    box-shadow:  1px 3px 8px 0px #f0737f;
+    outline: none;
+}
+
+/* Textarea styling for a larger input area */
+#fs-frm textarea {
+    resize: vertical;
+}
+
+/* Placeholder styling */
+#fs-frm input::placeholder,
+#fs-frm textarea::placeholder {
+    color: #ffb5c2;
+    font-style: italic;
+    font-size: 30px;
+    font-family: 'Lexique';
+
+}
+
+/* Submit button styling */
+#fs-frm input[type="submit"] {
+    display: inline-block;
     width: 100%;
-    padding: 10px;
-    margin-top: 15px;
+    padding: 12px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
     background-color: #f0737f;
-    color: white;
+    font-family: 'Lexique';
     border: none;
     border-radius: 16px;
     cursor: pointer;
-    font-family: 'Lexique';
-    font-size: 30px;
-  }
+    transition: background-color 0.3s ease;
+    box-shadow:  1px 3px 8px 0px #ffb5c2;
+}
 
-  .contact button:hover {
+#fs-frm input[type="submit"]:hover {
     background-color: #fcedf0;
     color: #f0737f;
     padding: 10px 20px;
     border: #f0737f solid 2px;
     border-radius: 16px;
-  }
-
+}
   .row {
     display: -ms-flexbox;
     /* IE10 */
@@ -1155,53 +1194,94 @@
       padding-left: 80px;
     }
 
-    .contact form {
-      width: 100%;
-      max-width: 500px;
-      padding-left: 80px;
-      font-size: 22px;
-      padding-top: 20px;
-    }
+    #fs-frm {
+    max-width: 90%;
+    padding-left: 80px;
+    font-family: 'Lexique';
+    padding-top: 0px;
+    color: #f0737f;
+    font-size: 30px;
+}
 
-    .contact label {
-      display: block;
-      margin-top: 10px;
-    }
+/* Fieldset styling */
+#fs-frm-inputs {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
 
-    .contact input[type="text"],
-    input[type="email"],
-    textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      border: 1px solid #f0737f;
-      border-radius: 4px;
-      font-family: 'Lexique';
-      font-size: 22px;
-      color: #ffb5c2;
-    }
+/* Label styling */
+#fs-frm label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #f0737f;
+    font-size: 22px;
+}
 
-    .contact button {
-      width: 100%;
-      padding: 10px;
-      margin-top: 15px;
-      background-color: #f0737f;
-      color: white;
-      border: none;
-      border-radius: 16px;
-      cursor: pointer;
-      font-family: 'Lexique';
-      font-size: 22px;
-    }
+/* Input and textarea styling */
+#fs-frm input[type="text"],
+#fs-frm input[type="email"],
+#fs-frm textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 18px;
+    color: #f0737f;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
 
-    .contact button:hover {
-      background-color: #fcedf0;
-      color: #f0737f;
-      padding: 10px 20px;
-      border: #f0737f solid 2px;
-      border-radius: 16px;
-    }
+#fs-frm input[type="text"]:focus,
+#fs-frm input[type="email"]:focus,
+#fs-frm textarea:focus {
+    border-color: #fcedf0;
+    box-shadow:  1px 3px 8px 0px #f0737f;
+    outline: none;
+}
 
+/* Textarea styling for a larger input area */
+#fs-frm textarea {
+    resize: vertical;
+}
+
+/* Placeholder styling */
+#fs-frm input::placeholder,
+#fs-frm textarea::placeholder {
+    color: #ffb5c2;
+    font-style: italic;
+    font-size: 30px;
+    font-family: 'Lexique';
+
+}
+
+/* Submit button styling */
+#fs-frm input[type="submit"] {
+    display: inline-block;
+    width: 100%;
+    padding: 12px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #f0737f;
+    font-family: 'Lexique';
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow:  1px 3px 8px 0px #ffb5c2;
+}
+
+#fs-frm input[type="submit"]:hover {
+    background-color: #fcedf0;
+    color: #f0737f;
+    padding: 10px 20px;
+    border: #f0737f solid 2px;
+    border-radius: 16px;
+}
 
     .footer {
       font-size: 20px;
@@ -1715,53 +1795,94 @@
       padding-left: 40px;
     }
 
-    .contact form {
-      width: 100%;
-      max-width: 500px;
-      padding-left: 40px;
-      font-size: 18px;
-      padding-top: 20px;
-    }
+        #fs-frm {
+    max-width: 90%;
+    padding-left: 40px;
+    font-family: 'Lexique';
+    padding-top: 0px;
+    color: #f0737f;
+    font-size: 30px;
+}
 
-    .contact label {
-      display: block;
-      margin-top: 10px;
-    }
+/* Fieldset styling */
+#fs-frm-inputs {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
 
-    .contact input[type="text"],
-    input[type="email"],
-    textarea {
-      width: 90%;
-      padding: 10px;
-      margin-top: 5px;
-      border: 1px solid #f0737f;
-      border-radius: 4px;
-      font-family: 'Lexique';
-      font-size: 18px;
-      color: #ffb5c2;
-    }
+/* Label styling */
+#fs-frm label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #f0737f;
+    font-size: 22px;
+}
 
-    .contact button {
-      width: 90%;
-      padding: 10px;
-      margin-top: 15px;
-      background-color: #f0737f;
-      color: white;
-      border: none;
-      border-radius: 16px;
-      cursor: pointer;
-      font-family: 'Lexique';
-      font-size: 18px;
-    }
+/* Input and textarea styling */
+#fs-frm input[type="text"],
+#fs-frm input[type="email"],
+#fs-frm textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 18px;
+    color: #f0737f;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
 
-    .contact button:hover {
-      background-color: #fcedf0;
-      color: #f0737f;
-      padding: 10px 20px;
-      border: #f0737f solid 2px;
-      border-radius: 16px;
-    }
+#fs-frm input[type="text"]:focus,
+#fs-frm input[type="email"]:focus,
+#fs-frm textarea:focus {
+    border-color: #fcedf0;
+    box-shadow:  1px 3px 8px 0px #f0737f;
+    outline: none;
+}
 
+/* Textarea styling for a larger input area */
+#fs-frm textarea {
+    resize: vertical;
+}
+
+/* Placeholder styling */
+#fs-frm input::placeholder,
+#fs-frm textarea::placeholder {
+    color: #ffb5c2;
+    font-style: italic;
+    font-size: 30px;
+    font-family: 'Lexique';
+
+}
+
+/* Submit button styling */
+#fs-frm input[type="submit"] {
+    display: inline-block;
+    width: 100%;
+    padding: 12px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #f0737f;
+    font-family: 'Lexique';
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow:  1px 3px 8px 0px #ffb5c2;
+}
+
+#fs-frm input[type="submit"]:hover {
+    background-color: #fcedf0;
+    color: #f0737f;
+    padding: 10px 20px;
+    border: #f0737f solid 2px;
+    border-radius: 16px;
+}
 
     .footer {
       font-size: 20px;
@@ -2000,18 +2121,19 @@
       <a href="https://www.linkedin.com/in/alex-jane-tan-6686a513a/"><i class="fa-brands fa-linkedin"
           style="color: #f0737f;"></i>
       </a>
-  <form action="send_email.php" method="POST">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-      
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-      
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
-        
-        <button type="submit">Send</button>
-      </form>
+<form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/movqwjqg"
+  method="post">
+  <fieldset id="fs-frm-inputs">
+    <label for="full-name">Full Name</label>
+    <input type="text" name="name" id="full-name" required="">
+    <label for="email-address">Email Address</label>
+    <input type="email" name="_replyto" id="email-address" required="">
+    <label for="message">Message</label>
+    <textarea rows="5" name="message" id="message"></textarea>
+    <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+  </fieldset>
+  <input type="submit" value="Submit">
+</form>
   </section>
 
   <div class="footer">
